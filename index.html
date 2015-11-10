@@ -1,10 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+<html lang="en-US">
 
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="js/jquery-ui-1.9.2.custom/css/smoothness/jquery-ui-1.9.2.custom.css" />
+    <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript">
+    $(init);
+
+    function init() {
+        $("#tabs").tabs();
+    }
+    </script>
+    <style type="text/css">
+    #tabs {
+        width: 50%;
+    }
+    
+    #tabs ul li {
+        width: 32.5%;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    </style>
+    <title>Modern Hip Clothing</title>
+</head>
+
+<body>
+    <div>
+        <h1 class="ui-state-default">Modern Hip Clothing</h1>
+        <div id="tabs">
+            <ul>
+                <li><a href="tops.html">Tops</a></li>
+                <li><a href="bottoms.html">Bottoms</a></li>
+                <li><a href="shoes.html">Shoes</a></li>
+            </ul>
+        </div>
+    </div>
 </body>
+
 </html>
