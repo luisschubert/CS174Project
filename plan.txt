@@ -1,0 +1,5 @@
+we are going to make a shopping cart page.
+that contains a list of products and a shopping cart area in the top right.
+when items are dragged to the shopping cart the button will update the list.
+below the shopping cart is a button that redirects to a purchase confirmation page
+
