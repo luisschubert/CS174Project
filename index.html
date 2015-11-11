@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="js/jquery-ui-1.9.2.custom/css/smoothness/jquery-ui-1.9.2.custom.css" />
     <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="js/dragdrop.js"></script>
     <script type="text/javascript" src="js/jquery-ui-1.11.4/jquery-ui.js"></script>
     <script type="text/javascript">
     $(init);
 
     function init() {
         $("#tabs").tabs();
+        $(".dragMe").draggable();
+
     }
     </script>
     <style type="text/css">
@@ -38,7 +41,14 @@
                 <li><a href="shoes.html">Shoes</a></li>
             </ul>
         </div>
+        <div>
+            <div id="makeMeDroppable">
+
+                <img src="https://datsunspirit.com/wp-content/uploads/2015/04/shopping-cart-hi.png" width = "200px" height = "200px">
+            </div>
+        </div>
     </div>
+
 </body>
 
 </html>

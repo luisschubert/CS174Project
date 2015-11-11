@@ -3,9 +3,12 @@ function init()
 {
     //cloneDragMe();
     $(".dragMe").draggable();
-    $("#target").droppable();
-    $("#target").bind("drop", highlightTarget);
-    $("#target").bind("dropout", resetTarget);
+    $('#makeMeDroppable').droppable( {
+        drop: handleDropEvent
+    } );
+    //$("#target").droppable();
+    //$("#target").bind("drop", highlightTarget);
+    //$("#target").bind("dropout", resetTarget);
 
     $("div").addClass("ui-widget")
             .addClass("ui-widget-content")
@@ -13,6 +16,13 @@ function init()
     $(":header").addClass("ui-widget-header")
                 .addClass("ui-corner-all");
 }
+
+function handleDropEvent( event, ui ) {
+    console.log("faggot!!!!");
+    var draggable = ui.draggable;
+    alert( 'The square with ID "' + draggable.attr('id') + '"has been added to the shopping cart!' );
+}
+
 function cloneDragMe()
 {
     console.log("fuck you i do what i want");
