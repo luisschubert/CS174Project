@@ -3,37 +3,62 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="js/jquery-ui-1.9.2.custom/css/smoothness/jquery-ui-1.9.2.custom.css" />
+    <link rel="stylesheet" type="text/css" href="./js/dragdrop.css">
     <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
     <script type="text/javascript" src="js/dragdrop.js"></script>
     <script type="text/javascript" src="js/jquery-ui-1.11.4/jquery-ui.js"></script>
+
+    <style type="text/css">
+        #mid-area{
+            float: left;
+            width: 60%;
+            padding: 10px;
+            /*margin-right: 10px;*/
+        }
+
+        #cart-area{
+            float: left;
+            width: 30%;
+            padding: 10px;
+            border: 1px solid blue;
+        }
+
+        #tabs ul li a{
+            width: 10em;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+
+
+        #info-panel{
+            position: relative;
+            float: left;
+            z-index: 10;
+            width: 100%;
+            margin-top: 50px;
+        }
+    </style>
     <script type="text/javascript">
     $(init);
 
     function init() {
         $("#tabs").tabs();
-        $(".dragMe").draggable();
-
+        $("#mid-area").addClass("ui-corner-all");
+        $("#cart-area").addClass("ui-corner-all");
     }
     </script>
-    <style type="text/css">
-    #tabs {
-        width: 50%;
-    }
-    
-    #tabs ul li {
-        width: 32%;
-    }
-    
-    h1 {
-        text-align: center;
-    }
-    </style>
+
     <title>Modern Hip Clothing</title>
 </head>
 
 <body>
-    <div>
+    <div id="header">
         <h1 class="ui-state-default">Modern Hip Clothing</h1>
+    </div>
+    <div id="mid-area">
         <div id="tabs">
             <ul>
                 <li><a href="tops.html">Tops</a></li>
@@ -41,11 +66,18 @@
                 <li><a href="shoes.html">Shoes</a></li>
             </ul>
         </div>
-        <div>
-            <div id="makeMeDroppable">
 
-                <img src="https://datsunspirit.com/wp-content/uploads/2015/04/shopping-cart-hi.png" width = "200px" height = "200px">
+    </div>
+    <div id="cart-area">
+        <div id="droppable">
+            <div>
+            <img src="./pictures/shopping-cart.png" width = "200px" height = "200px">
+
             </div>
+        </div>
+
+        <div id="info-panel">
+            <div class="ui-dialog-content">You have selected: </div>
         </div>
     </div>
 

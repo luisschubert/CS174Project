@@ -1,20 +1,42 @@
-.dragMe {
+/*.dragMe {*/
+    /*width: 100px;*/
+    /*height: 100px;*/
+    /*border: 1px solid blue;*/
+    /*text-align: center;*/
+    /*background-color: white;*/
+    /*position: absolute;*/
+    /*z-index: 100;*/
+/*}*/
+
+/*#target {*/
+    /*width: 200px;*/
+    /*height: 200px;*/
+    /*border: 1px solid blue;*/
+    /*text-align: center;*/
+    /*position: absolute;*/
+    /*left: 200px;*/
+    /*top: 100px;*/
+    /*z-index: 0;*/
+/*}*/
+
+/*#makeMeDroppable{*/
+    /*width:200px;*/
+    /*top:0;*/
+    /*position: absolute;*/
+    /*padding: 10px;*/
+/*}*/
+
+.dragme {
     width: 100px;
     height: 100px;
-    border: 1px solid blue;
-    text-align: center;
-    background-color: white;
-    position: absolute;
-    z-index: 100;
+    z-index: 5;
+    /*background: #ccc;*/
 }
-
-#target {
+#droppable {
+    float: left;
+    position: relative;
     width: 200px;
     height: 200px;
-    border: 1px solid blue;
-    text-align: center;
-    position: absolute;
-    left: 200px;
-    top: 100px;
-    z-index: 0;
+    margin-left: 25%;
+    z-index: -1;
 }
