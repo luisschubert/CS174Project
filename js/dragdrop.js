@@ -17,7 +17,7 @@ function handleDropEvent( event, ui ) {
     $("#output-result").append("<br> "+draggable.attr('id') + "</br>");
     total.push(draggable.attr('id'));
     deleteImage( ui.draggable);
-    testArray();
+    //testArray();
 }
 
 function deleteImage( $item ) {
@@ -34,5 +34,15 @@ function testArray() {
 }
 
 function sentCart() {
-    alert('sending');
+    //alert('sending');
+    sendingInfo();
 }
+
+function sendingInfo() {
+    cartArray = JSON.stringify(total);
+    $.post("order.php", {"cart": cartArray}, loadTotal);
+}
+function loadTotal(data, status) {
+    $("#confirm").html(data);
+}
+
