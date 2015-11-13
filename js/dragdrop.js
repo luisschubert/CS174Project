@@ -1,4 +1,5 @@
 $(init);
+total = new Array();
 function init()
 {
     //cloneDragMe();
@@ -6,13 +7,17 @@ function init()
     $('#droppable').droppable( {
         drop: handleDropEvent
     } );
+
+    jQuery.data
 }
 
 function handleDropEvent( event, ui ) {
     var draggable = ui.draggable;
-    alert( 'The square with ID "' + draggable.attr('id') + '"has been added to the shopping cart!' );
+    //alert( 'The square with ID "' + draggable.attr('id') + '"has been added to the shopping cart!' );
     $("#output-result").append("<br> "+draggable.attr('id') + "</br>");
+    total.push(draggable.attr('id'));
     deleteImage( ui.draggable);
+    testArray();
 }
 
 function deleteImage( $item ) {
@@ -20,4 +25,14 @@ function deleteImage( $item ) {
 
     });
     //$item.appendTo("cart-area").fadeIn;
+}
+
+function testArray() {
+    for (var i in total) {
+        alert(total[i]);
+    }
+}
+
+function sentCart() {
+    alert('sending');
 }

@@ -74,6 +74,17 @@
                 icons:{
                     primary:"ui-icon-cart"
                 }
+            }).click(function () {
+                if (total.length == 0) {
+                    $('#confirm').text("Sorry, your cart is empty.")
+                }
+                else if ($("#datepicker").val() == '') {
+                    $('#confirm').text("Please enter your shipping date")
+                }
+                else {
+                    $('#confirm').text("Processing...")
+                    sentCart()
+                }
             });
             $("#cancel").button({
                 icons: {
