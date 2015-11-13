@@ -27,10 +27,37 @@
 /*}*/
 
 .dragme {
-    width: 100px;
-    height: 100px;
+    width: 10em;
+    height: 10em;
     z-index: 5;
+    margin-top: 10px;
+
     /*background: #ccc;*/
+}
+
+.items {
+    display: inline-block;
+}
+
+.dragme img {
+    float: left;
+    margin-left: 3em;
+    /*width: 30%;*/
+}
+
+.dragme p {
+    float: left;
+    /*width: 70%;*/
+}
+
+.dragme p.ui-widget-header {
+    width: 100%;
+    /*width: 70%;*/
+}
+
+.dragme span {
+    float: left;
+    /*width: 30%;*/
 }
 #droppable {
     float: left;
