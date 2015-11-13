@@ -70,10 +70,17 @@
             $("#cart-area").addClass("ui-corner-all");
 
             $("#datepicker").datepicker();
-            $("button").button({
+            $("#buy").button({
                 icons:{
                     primary:"ui-icon-cart"
                 }
+            });
+            $("#cancel").button({
+                icons: {
+                    primary: "ui-icon-trash"
+                }
+            }).click(function () {
+                $('#output-result').text("You have selected:")
             });
         }
 
@@ -112,7 +119,9 @@
             <h3>Shipping Date:</h3>
             <input type="text" id="datepicker" size="30"/>
 
-            <button>Purchase!</button>
+            <h3 id="confirm"></h3>
+            <button id="buy">Purchase!</button>
+            <button id="cancel">Empty Cart</button>
         </div>
     </div>
 </div>
